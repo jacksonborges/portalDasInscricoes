@@ -1,0 +1,489 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Portal Das Inscrições</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/placeholder.svg?height=600&width=1200');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-subtitle {            
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+            line-height: 1.4;
+            padding: 15px 15px 15px 15px;
+            border-radius: 10px;            
+        }
+
+        .filter-section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+            padding: 2rem;
+        }
+
+        .btn-limpar {
+            background: #e91e63;
+            border: none;
+            color: white;
+            border-radius: 25px;
+            padding: 0.5rem 2rem;
+            font-weight: 500;
+        }
+
+        .btn-limpar:hover {
+            background: #c2185b;
+            color: white;
+        }
+
+        .card.race-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .card.race-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .race-info {
+            flex: 1;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .race-title {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .race-details {
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .btn-inscricao {
+            width: 100%;
+            border-radius: 25px;
+            padding: 0.75rem;
+            font-weight: 600;
+            border: none;
+        }
+
+        .btn-disponivel {
+            background: #1e3a5f;
+            color: white;
+        }
+
+        .btn-disponivel:hover {
+            background: #2c5282;
+            color: white;
+        }
+
+        .btn-indisponivel {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-indisponivel:hover {
+            background: #c82333;
+            color: white;
+        }
+
+        .form-control, .form-select {
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #3B82F6;
+            box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+        }
+
+        .hero-section {
+            background-image: url('/img/healthy-lifestyle-running-outdoors.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 30px 0;
+            color: white;
+            text-align: center;
+            position: relative;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            margin-top: 0;
+        }
+       
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+            z-index: 1;
+        }
+
+        .hero-section .container {
+            position: relative;
+            z-index: 2;
+        }
+       
+        .filtro-eventos {
+            margin-top: -50px; 
+            z-index: 5;
+            position: relative;
+        }
+
+        .filter-box {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #4ecdc4; /* borda superior colorida */
+            margin-top: 20px;
+        }
+
+        .btn-outline-danger {
+            border-radius: 10px;
+            padding: 8px 20px;
+            font-weight: 500;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">DESAFIOS QUE TE LEVAM MAIS LONGE</h1>
+            <p class="hero-subtitle" style="background-color: rgba(0, 0, 0, 0.2);">
+                Desafie seus limites e viva novas conquistas. 
+                Explore os eventos disponíveis e inscreva-se hoje mesmo.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <div class="filtro-eventos container">
+        <div class="filter-box p-4">
+            <div class="row g-3 align-items-end">
+                <div class="col-md-3">
+                    <label class="form-label text-muted">Nome do evento</label>
+                    <input type="text" class="form-control" placeholder="Digite o nome...">
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label text-muted">Selecione o Estado</label>
+                    <select class="form-select">
+                        <option value="">Todos</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label text-muted">Data Inicial</label>
+                    <input type="date" class="form-control" value="2025-07-31">
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label text-muted">Data Final</label>
+                    <input type="date" class="form-control" value="2025-07-31">
+                </div>
+                <div class="col-md-2 d-flex align-items-center">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="inscricoesAbertas">
+                        <label class="form-check-label text-muted ms-2" for="inscricoesAbertas">
+                            Inscrições Abertas
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-1 d-flex justify-content-end">
+                    <button class="btn btn-outline-danger">Limpar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card race-card">
+                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Maratona">
+                    <div class="race-info">
+                        <h5 class="race-title">10ª MEIA MARATONA DA CHAPADA CAIXA</h5>
+                        <div class="race-details">
+                            <div><i class="fas fa-calendar me-2"></i>02/08/2025 - 16:00</div>
+                            <div><i class="fas fa-map-marker-alt me-2"></i>Alto Paraíso de Goiás - GO</div>
+                        </div>
+                        <button class="btn btn-inscricao btn-indisponivel">
+                            <i class="fas fa-times me-2"></i>Indisponível
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card race-card">
+                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Corrida Bonfim">
+                    <div class="race-info">
+                        <h5 class="race-title">2 CORRIDA DE BONFIM 2025</h5>
+                        <div class="race-details">
+                            <div><i class="fas fa-calendar me-2"></i>02/08/2025 - 06:30</div>
+                            <div><i class="fas fa-map-marker-alt me-2"></i>Bonfim - RR</div>
+                        </div>
+                        <button class="btn btn-inscricao btn-disponivel">
+                            <i class="fas fa-running me-2"></i>Inscreva-se
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card race-card">
+                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Corrida Kids">
+                    <div class="race-info">
+                        <h5 class="race-title">CORRIDA BORA BB SEGUROS KIDS</h5>
+                        <div class="race-details">
+                            <div><i class="fas fa-calendar me-2"></i>03/08/2025 - 09:00</div>
+                            <div><i class="fas fa-map-marker-alt me-2"></i>Brasília - DF</div>
+                        </div>
+                        <button class="btn btn-inscricao btn-disponivel">
+                            <i class="fas fa-running me-2"></i>Inscreva-se
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card race-card">
+                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Conta Passinhos">
+                    <div class="race-info">
+                        <h5 class="race-title">CONTA PASSINHOS 2ª ETAPA</h5>
+                        <div class="race-details">
+                            <div><i class="fas fa-calendar me-2"></i>03/08/2025 - 08:00</div>
+                            <div><i class="fas fa-map-marker-alt me-2"></i>Brasília - DF</div>
+                        </div>
+                        <button class="btn btn-inscricao btn-disponivel">
+                            <i class="fas fa-running me-2"></i>Inscreva-se
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mais cards podem ser adicionados aqui -->
+        <div class="row">
+            <!-- Card 5 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card race-card">
+                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Trail Run">
+                    <div class="race-info">
+                        <h5 class="race-title">TRAIL RUN SERRA DA MANTIQUEIRA</h5>
+                        <div class="race-details">
+                            <div><i class="fas fa-calendar me-2"></i>15/08/2025 - 07:00</div>
+                            <div><i class="fas fa-map-marker-alt me-2"></i>Campos do Jordão - SP</div>
+                        </div>
+                        <button class="btn btn-inscricao btn-disponivel">
+                            <i class="fas fa-running me-2"></i>Inscreva-se
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card race-card">
+                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Night Run">
+                    <div class="race-info">
+                        <h5 class="race-title">NIGHT RUN COPACABANA</h5>
+                        <div class="race-details">
+                            <div><i class="fas fa-calendar me-2"></i>22/08/2025 - 19:00</div>
+                            <div><i class="fas fa-map-marker-alt me-2"></i>Rio de Janeiro - RJ</div>
+                        </div>
+                        <button class="btn btn-inscricao btn-disponivel">
+                            <i class="fas fa-running me-2"></i>Inscreva-se
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card race-card">
+                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Corrida Solidária">
+                    <div class="race-info">
+                        <h5 class="race-title">CORRIDA SOLIDÁRIA AGOSTO DOURADO</h5>
+                        <div class="race-details">
+                            <div><i class="fas fa-calendar me-2"></i>29/08/2025 - 08:00</div>
+                            <div><i class="fas fa-map-marker-alt me-2"></i>Belo Horizonte - MG</div>
+                        </div>
+                        <button class="btn btn-inscricao btn-disponivel">
+                            <i class="fas fa-running me-2"></i>Inscreva-se
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card race-card">
+                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Corrida Corporativa">
+                    <div class="race-info">
+                        <h5 class="race-title">CORRIDA CORPORATIVA TECH RUN</h5>
+                        <div class="race-details">
+                            <div><i class="fas fa-calendar me-2"></i>05/09/2025 - 07:30</div>
+                            <div><i class="fas fa-map-marker-alt me-2"></i>São Paulo - SP</div>
+                        </div>
+                        <button class="btn btn-inscricao btn-indisponivel">
+                            <i class="fas fa-times me-2"></i>Indisponível
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalNovaCorrida" tabindex="-1" aria-labelledby="modalNovaCorridaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <form id="formNovaCorrida" method="post" asp-controller="Corrida" asp-action="Create">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalNovaCorridaLabel">Cadastrar Nova Corrida</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body row g-3">
+                        <div class="col-md-6">
+                            <label for="NomeEvento" class="form-label">Nome do Evento</label>
+                            <input type="text" class="form-control" id="NomeEvento" name="NomeEvento" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="DataHora" class="form-label">Data e Hora</label>
+                            <input type="datetime-local" class="form-control" id="DataHora" name="DataHora" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Local" class="form-label">Local</label>
+                            <input type="text" class="form-control" id="Local" name="Local" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Distancias" class="form-label">Distâncias</label>
+                            <input type="text" class="form-control" id="Distancias" name="Distancias">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="LocalLargadaChegada" class="form-label">Local de Largada/Chegada</label>
+                            <input type="text" class="form-control" id="LocalLargadaChegada" name="LocalLargadaChegada">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Organizadores" class="form-label">Organizadores</label>
+                            <input type="text" class="form-control" id="Organizadores" name="Organizadores">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="ImagemArquivo" class="form-label">Imagem do Evento</label>
+                            <input type="file" class="form-control" id="ImagemArquivo" name="ImagemArquivo" accept="image/*">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="LinkInscricao" class="form-label">Link de Inscrição</label>
+                            <input type="text" class="form-control" id="LinkInscricao" name="LinkInscricao">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check mt-4">
+                                <input type="checkbox" class="form-check-input" id="InscricaoAberta" name="InscricaoAberta">
+                                <label class="form-check-label" for="InscricaoAberta">Inscrição Aberta</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Salvar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Funcionalidade do botão Limpar
+        document.querySelector('.btn-limpar').addEventListener('click', function() {
+            document.querySelector('input[type="text"]').value = '';
+            document.querySelector('select').selectedIndex = 0;
+            document.querySelectorAll('input[type="date"]').forEach(input => input.value = '');
+            document.querySelector('#inscricoesAbertas').checked = false;
+        });
+
+        // Funcionalidade dos botões de inscrição
+        document.querySelectorAll('.btn-disponivel').forEach(btn => {
+            btn.addEventListener('click', function() {
+                alert('Redirecionando para página de inscrição...');
+            });
+        });
+    </script>
+</body>
+</html>
+
