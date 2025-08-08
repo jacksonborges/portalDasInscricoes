@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "3ª Corrida do Turismo";
+}
+
+<div class="container mt-4">
+
+    <!-- Banner -->
+    <div class="text-center">
+        <img src="/img/corridaAsa.jpg" alt="" class="img-fluid" />
+    </div>
+
+    <!-- Botão de inscrição -->
+    <div class="text-center mt-3">
+        <a href="@Url.Action("Inscricao", "Corrida")" class="btn btn-primary btn-lg">INSCREVA-SE</a>
+    </div>
+
+    <div class="row mt-4">
+        <!-- Conteúdo principal -->
+        <div class="col-md-9">
+
+            <h3 class="mt-3">40ª CORRIDA DA ASA</h3>
+
+            <h5 class="mt-4">INSCRIÇÕES ABERTAS</h5>
+            <p><strong>Data:</strong> 05 de outubro de 2025 - 06:00</p>
+            <p><strong>Local:</strong> Base Aérea - Salvador</p>
+
+            <hr />
+
+            <h5>Premiação</h5>
+            <p>
+                Serão premiados os três primeiros colocados geral e por faixa etária, masculino e feminino.
+            </p>
+
+            <hr />
+
+            <h5>Entrega do Kit</h5>
+            <p>
+                A entrega será feita nos dias 16 e 17 de agosto, no local informado pelo organizador.
+            </p>
+
+            <p>
+                É obrigatório apresentar documento oficial com foto para retirada do kit.
+            </p>
+
+            <!-- Imagem da camisa -->
+            <div class="text-center mt-4">
+                <img src="~/Content/img/camisa-corrida.png" alt="Camisa Corrida" class="img-fluid" style="max-width: 400px;" />
+            </div>
+
+        </div>
+
+        <!-- Barra lateral -->
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h6>Compartilhe</h6>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp fa-lg"></i></a>
+                    </div>
+                    <hr />
+                    <h6>Contagem regressiva</h6>
+                    <div id="countdown">
+                        <span>21</span> dias
+                        <br />
+                        <span>11</span> horas
+                        <br />
+                        <span>54</span> min
+                    </div>
+                    <hr />
+                    <a href="@Url.Action("Contato", "Home")" class="btn btn-outline-secondary btn-sm">CONTATO COM O SUPORTE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
