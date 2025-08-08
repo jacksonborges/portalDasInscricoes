@@ -482,3 +482,25 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# Pasta de configurações do Visual Studio
+.vs/
+
+# Arquivos temporários e de build
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Cache do Visual Studio
+*.dbmdl
+*.dbcache
+*.v2
+
+# Configurações de layout e backups do Visual Studio
+DocumentLayout.json
+DocumentLayout.backup.json
+
+# Arquivos gerados automaticamente pelo VS
+applicationhost.config
+
