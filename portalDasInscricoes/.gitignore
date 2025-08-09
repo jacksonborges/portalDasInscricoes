@@ -504,3 +504,23 @@ DocumentLayout.backup.json
 # Arquivos gerados automaticamente pelo VS
 applicationhost.config
 
+# Ignorar pasta de cache do Visual Studio
+.vs/
+
+# Ignorar arquivos temporários e de build do VS
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.v2
+*.db
+*.db-shm
+*.db-wal
+*.dtbcache.v2
+*.futdcache.v2
+*.dbmdl
+
+# Ignorar configs específicas de layout do VS
+DocumentLayout.*
+
+
