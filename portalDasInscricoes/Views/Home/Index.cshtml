@@ -99,6 +99,26 @@
             margin-bottom: 12px;
         }
 
+        .race-card {
+            overflow: hidden; 
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+            cursor: pointer;
+        }
+
+        .race-card img {
+            width: 100%; 
+            height: auto; 
+            object-fit: contain; 
+            transition: transform 0.4s ease; 
+            display: block;
+            margin: 0 auto;
+        }
+
+        .race-card:hover img {
+            transform: scale(1.05); 
+        }
+
         .btn-inscricao {
             width: 100%;
             border-radius: 25px;
@@ -272,15 +292,15 @@
             <!-- Card 1 -->
             <div class="col-lg-3 col-md-6">
                 <div class="card race-card">
-                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Maratona">
+                    <img src="/img/corridaAsa.jpg" class="card-img-top" alt="Maratona">
                     <div class="race-info">
-                        <h5 class="race-title">10ª MEIA MARATONA DA CHAPADA CAIXA</h5>
+                        <h5 class="race-title">40ª CORRIDA DA ASA</h5>
                         <div class="race-details">
-                            <div><i class="fas fa-calendar me-2"></i>02/08/2025 - 16:00</div>
-                            <div><i class="fas fa-map-marker-alt me-2"></i>Alto Paraíso de Goiás - GO</div>
+                            <div><i class="fas fa-calendar me-2"></i>05/10/2025 - 06:00</div>
+                            <div><i class="fas fa-map-marker-alt me-2"></i>Base Aérea - Salavador - BA</div>
                         </div>
-                        <button class="btn btn-inscricao btn-indisponivel">
-                            <i class="fas fa-times me-2"></i>Indisponível
+                        <button class="btn btn-inscricao btn-disponivel" onclick="window.location.href='@Url.Action("Index", "Corrida")'">
+                            <i class="fas fa-running me-2"></i>Disponível
                         </button>
                     </div>
                 </div>
@@ -296,8 +316,8 @@
                             <div><i class="fas fa-calendar me-2"></i>02/08/2025 - 06:30</div>
                             <div><i class="fas fa-map-marker-alt me-2"></i>Bonfim - RR</div>
                         </div>
-                        <button class="btn btn-inscricao btn-disponivel">
-                            <i class="fas fa-running me-2"></i>Inscreva-se
+                        <button class="btn btn-inscricao btn-indisponivel">
+                            <i class="fas fa-times me-2"></i>Indisponível
                         </button>
                     </div>
                 </div>
