@@ -194,12 +194,30 @@
             position: relative;
         }
 
-        .filter-box {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            border-top: 4px solid #4ecdc4; /* borda superior colorida */
-            margin-top: 20px;
+        /* Filter Section */
+        .filter-section {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+            padding: 2rem;
+            border-top: 4px solid #20c997;
+            transition: all 0.3s ease;
+        }
+
+            .filter-section:hover {
+                box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            }
+
+        .filter-section {
+            margin-top: -40px;
+            padding: 1.5rem;
+        }
+
+        .filter-section {
+            padding: 1rem;
         }
 
         .btn-outline-danger {
@@ -223,16 +241,20 @@
     </section>
 
     <!-- Filter Section -->
-    <div class="filtro-eventos container">
-        <div class="filter-box p-4">
+    <div class="container">
+        <div class="filter-section">
             <div class="row g-3 align-items-end">
-                <div class="col-md-3">
-                    <label class="form-label text-muted">Nome do evento</label>
-                    <input type="text" class="form-control" placeholder="Digite o nome...">
+                <div class="col-lg-3 col-md-6">
+                    <label class="form-label">
+                        <i class="fas fa-search me-2"></i>Nome do evento
+                    </label>
+                    <input type="text" class="form-control" id="searchInput" placeholder="Digite o nome...">
                 </div>
-                <div class="col-md-2">
-                    <label class="form-label text-muted">Selecione o Estado</label>
-                    <select class="form-select">
+                <div class="col-lg-2 col-md-6">
+                    <label class="form-label">
+                        <i class="fas fa-map-marker-alt me-2"></i>Estado
+                    </label>
+                    <select class="form-select" id="stateSelect">
                         <option value="">Todos</option>
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
@@ -263,23 +285,27 @@
                         <option value="TO">Tocantins</option>
                     </select>
                 </div>
-                <div class="col-md-2">
-                    <label class="form-label text-muted">Data Inicial</label>
-                    <input type="date" class="form-control" value="2025-07-31">
+                <div class="col-lg-2 col-md-6">
+                    <label class="form-label">
+                        <i class="fas fa-calendar me-2"></i>Data Inicial
+                    </label>
+                    <input type="date" class="form-control" id="startDate">
                 </div>
-                <div class="col-md-2">
-                    <label class="form-label text-muted">Data Final</label>
-                    <input type="date" class="form-control" value="2025-07-31">
+                <div class="col-lg-2 col-md-6">
+                    <label class="form-label">
+                        <i class="fas fa-calendar-alt me-2"></i>Data Final
+                    </label>
+                    <input type="date" class="form-control" id="endDate">
                 </div>
-                <div class="col-md-2 d-flex align-items-center">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="inscricoesAbertas">
-                        <label class="form-check-label text-muted ms-2" for="inscricoesAbertas">
-                            Inscrições Abertas
+                <div class="col-lg-2 col-md-6">
+                    <div class="form-check form-switch mt-4">
+                        <input class="form-check-input" type="checkbox" id="openRegistrations">
+                        <label class="form-check-label ms-2" for="openRegistrations">
+                            <i class="fas fa-toggle-on me-1"></i>Inscrições Abertas
                         </label>
                     </div>
                 </div>
-                <div class="col-md-1 d-flex justify-content-end">
+                <div class="col-lg-1 col-md-6 d-flex justify-content-end">
                     <button class="btn btn-outline-danger">Limpar</button>
                 </div>
             </div>
