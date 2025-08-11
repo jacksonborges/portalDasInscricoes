@@ -9,6 +9,12 @@
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.5.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PortalDasInscricoes.Business\PortalDasInscricoes.Business.csproj" />
+    <ProjectReference Include="..\PortalDasInscricoes.Repository\PortalDasInscricoes.Repository.csproj" />
   </ItemGroup>
 
 </Project>
