@@ -1,0 +1,13 @@
+C:\Users\jacksonbs\source\repos\PortalDasInscricoes\PortalDasInscricoes.Repository\obj\Debug\net8.0\PortalDasInscricoes.Repository.csproj.AssemblyReference.cache
+C:\Users\jacksonbs\source\repos\PortalDasInscricoes\PortalDasInscricoes.Repository\obj\Debug\net8.0\PortalDasInscricoes.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jacksonbs\source\repos\PortalDasInscricoes\PortalDasInscricoes.Repository\obj\Debug\net8.0\PortalDasInscricoes.Repository.AssemblyInfoInputs.cache
+C:\Users\jacksonbs\source\repos\PortalDasInscricoes\PortalDasInscricoes.Repository\obj\Debug\net8.0\PortalDasInscricoes.Repository.AssemblyInfo.cs
+C:\Users\jacksonbs\source\repos\PortalDasInscricoes\PortalDasInscricoes.Repository\obj\Debug\net8.0\PortalDasInscricoes.Repository.csproj.CoreCompileInputs.cache
+C:\Users\jacksonbs\source\repos\PortalDasInscricoes\PortalDasInscricoes.Repository\obj\Debug\net8.0\PortalDasInscricoes.Repository.sourcelink.json
+C:\Users\jacksonbs\source\repos\PortalDasInscricoes\PortalDasInscricoes.Repository\bin\Debug\net8.0\PortalDasInscricoes.Repository.deps.json
+C:\Users\jacksonbs\source\repos\PortalDasInscricoes\PortalDasInscricoes.Repository\bin\Debug\net8.0\PortalDasInscricoes.Repository.dll
+C:\Users\jacksonbs\source\repos\PortalDasInscricoes\PortalDasInscricoes.Repository\bin\Debug\net8.0\PortalDasInscricoes.Repository.pdb
+C:\Users\jacksonbs\source\repos\PortalDasInscricoes\PortalDasInscricoes.Repository\obj\Debug\net8.0\PortalDasInscricoes.Repository.dll
+C:\Users\jacksonbs\source\repos\PortalDasInscricoes\PortalDasInscricoes.Repository\obj\Debug\net8.0\refint\PortalDasInscricoes.Repository.dll
+C:\Users\jacksonbs\source\repos\PortalDasInscricoes\PortalDasInscricoes.Repository\obj\Debug\net8.0\PortalDasInscricoes.Repository.pdb
+C:\Users\jacksonbs\source\repos\PortalDasInscricoes\PortalDasInscricoes.Repository\obj\Debug\net8.0\ref\PortalDasInscricoes.Repository.dll
