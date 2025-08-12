@@ -18,7 +18,7 @@ namespace PortalDasInscricoes.Repository.Entities
         public int? LimiteParticipantes { get; set; }
 
         // Relacionamentos
-        public ICollection<Inscricao> Inscricoes { get; set; }
+        public ICollection<Inscricao> Inscricoes { get; set; } = new List<Inscricao>();
 
     }
 }
