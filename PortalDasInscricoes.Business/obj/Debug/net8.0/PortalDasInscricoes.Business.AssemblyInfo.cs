@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PortalDasInscricoes.Business")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6992769ee23e36e1d0e20d5ce81252760ccb53a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4112d8a3df010ced775578d00e9bf064abac4cf4")]
 [assembly: System.Reflection.AssemblyProductAttribute("PortalDasInscricoes.Business")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PortalDasInscricoes.Business")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

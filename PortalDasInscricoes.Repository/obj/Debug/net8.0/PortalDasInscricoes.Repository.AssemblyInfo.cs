@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PortalDasInscricoes.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6992769ee23e36e1d0e20d5ce81252760ccb53a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+068b54ca96950fcb9f621a5bd7e04d128d21a613")]
 [assembly: System.Reflection.AssemblyProductAttribute("PortalDasInscricoes.Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PortalDasInscricoes.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
