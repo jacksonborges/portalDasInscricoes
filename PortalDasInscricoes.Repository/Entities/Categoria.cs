@@ -7,7 +7,7 @@ namespace PortalDasInscricoes.Repository.Entities
         public int Id { get; set; }
         // FK Evento
         public int EventoId { get; set; }
-        //public Evento Evento { get; set; }
+        public Evento Evento { get; set; }
 
         [Required, StringLength(100)]
         public string NomeCategoria { get; set; } // Ex.: "5K", "10K"
@@ -18,7 +18,7 @@ namespace PortalDasInscricoes.Repository.Entities
         public int? LimiteParticipantes { get; set; }
 
         // Relacionamentos
-        //public ICollection<Inscricao> Inscricoes { get; set; }
+        public ICollection<Inscricao> Inscricoes { get; set; }
 
     }
 }

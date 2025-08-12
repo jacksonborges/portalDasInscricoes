@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PortalDasInscricoes.Repository.Entities
 {
-    internal class Pagamento
+    public class Pagamento
     {
         public int Id { get; set; }
 

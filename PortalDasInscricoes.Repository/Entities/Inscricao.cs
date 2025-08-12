@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PortalDasInscricoes.Repository.Entities
 {
-    internal class Inscricao
+    public class Inscricao
     {
         public int Id { get; set; }
 
